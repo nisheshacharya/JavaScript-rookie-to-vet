@@ -49,3 +49,14 @@ else{
 }
 
 
+// write if else in fancy way 
+
+(2<3) ? console.log('true') : console.log(false);
+
+// this is same as: 
+
+if(2<3){
+    console.log('true');
+}else{
+    console.log('false')
+}
