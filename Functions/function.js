@@ -56,28 +56,35 @@ weatherNow();
 a callback function is a function that is passed as an argument
 to another function and is executed after the completion of a specific task. */
 
-
-function callBackAgeCheck(birthYear) {
-
-    const age = getAge(birthYear);
-    if (age >= 18) {
-      console.log("You are good");
-    } else {
-      console.log("Too young");
-    }
+function callBackAgeCheck(birthYear, getAge) {
+  const age = getAge(birthYear);
+  if (age >= 18) {
+    console.log("You are good");
+  } else {
+    console.log("Too young");
   }
-
-function getAge(birthYear, callBackAgeCheck) {    //Here callBackAgeCheck is callback function passed to another function as parameter
-  const date = new Date();
-  const year = date.getFullYear();
-   const birthYear= year - birthYear;
-   callBackAgeCheck(birthYear);
 }
 
-getAge(1992);
+function getAge(birthYear) {
+  //Here callBackAgeCheck is callback function passed to another function as parameter
+  const date = new Date();
+  const year = date.getFullYear();
+  return;
+}
 
+getAge(1992, callBackAgeCheck);
 
-/
+// Arrow functions
 
+let count = 10;
+const countDown = () => {
+  const myInterval = setInterval(() => {
+    console.log(count);
+    count--;
+    if (count == -1) {
+      clearInterval(myInterval);
+    }
+  }, 1000);
+};
 
-
+countDown();
