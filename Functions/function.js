@@ -38,3 +38,46 @@ function addNumbers(a, b, c) {
 }
 
 console.log(addNumbers(2, 3, 4)); //9   have to console.log to see the return
+
+//Function as an expression
+
+function weatherUpdate() {
+  console.log("It's cold");
+}
+
+const weatherNow = weatherUpdate;
+
+// we can call this function using expressing expression
+weatherNow();
+
+/* 
+    // Callback function 
+
+a callback function is a function that is passed as an argument
+to another function and is executed after the completion of a specific task. */
+
+
+function callBackAgeCheck(birthYear) {
+
+    const age = getAge(birthYear);
+    if (age >= 18) {
+      console.log("You are good");
+    } else {
+      console.log("Too young");
+    }
+  }
+
+function getAge(birthYear, callBackAgeCheck) {    //Here callBackAgeCheck is callback function passed to another function as parameter
+  const date = new Date();
+  const year = date.getFullYear();
+   const birthYear= year - birthYear;
+   callBackAgeCheck(birthYear);
+}
+
+getAge(1992);
+
+
+/
+
+
+
