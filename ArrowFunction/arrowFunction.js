@@ -12,8 +12,16 @@ function getSum(a, b) {
 
 //Arrow function
 
-const sayHello = () => {  // this function is not returning, hence {} is used
+const sayHello = () => {
+  // this function is not returning, hence {} is used
   console.log("Hello");
 };
 
-const getTotal = (a, b) => (a + b);  // return
+const getTotal = (a, b) => a + b; // return in one line function
+
+//Multi line arrow function can have return inside {}
+
+const addTwo = (a, b) => {
+  console.log("Added a and b");
+  return a + b;
+};
