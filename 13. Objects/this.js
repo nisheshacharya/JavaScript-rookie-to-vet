@@ -1,5 +1,6 @@
 //Example of use of this: 
 
+/*
 
 let calculator = {
   read() {
@@ -19,3 +20,8 @@ let calculator = {
 calculator.read();
 calculator.sum();
 calculator.multiply();
+
+*/
+
+
+// There is 
